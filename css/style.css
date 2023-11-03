@@ -66,7 +66,7 @@ body {
 }
 
 #menu-icon {
-    font: size 3.6rem;
+    font-size: 3.6rem;
     color: var(--text-color);
     cursor: pointer;
     display: none;
@@ -250,7 +250,28 @@ span {
 .contact form .textarea-field textarea{
     resize: none;
      
-}.footer{
+}
+.socials{
+    position: absolute;
+    bottom: 4rem;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+.socials a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+
+
+}
+.footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -369,6 +390,40 @@ span {
     .navbar.active a{
         transform: translateX(0);
         transition-delay: .25s;
+    }
+    .about{
+        width: 80%;
+    }
+
+}
+@media (max-width: 520px){
+    html{
+        font-size: 50%;
+    }
+    .home-content h1 {
+        display: flex;
+        flex-direction: column;
+    }
+    .socials{
+        width: 160px;
+    }
+    .socials a{
+        width: 38px;
+        height: 38px;
+    }
+    .about{
+        width: 100%;
+    }
+}
+@media (max-width: 462px){
+    .home-content h1 {
+        font-size: 5.2rem;
+    }
+    .contact form .inputbox .input-field {
+        width: 100%;
+    }
+    .about{
+        width: 100%;
     }
 
 }
