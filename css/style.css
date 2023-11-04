@@ -12,10 +12,11 @@
 }
 
 :root{
-    --bg-color:#faf5e3;
+    --bg-color:whitesmoke;
+    --bg-colorr:#faf5e3;
     --secong-bg-color:white;
-    --main-color: #f77e0c;
-    --text-color:#48a151;
+    --main-color: #f58a1a;
+    --text-color:#1c7b73;
 }
 
 html{
@@ -26,6 +27,7 @@ html{
 body {
     background: var(--bg-color);
     color: var(--text-color);
+    
 }
 
 .header {
@@ -41,13 +43,21 @@ body {
     z-index: 100; 
     transition: .3s;
 }
-
+.home{
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+    background: url('/data/images/TCM.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
 .header.sticky{
     background: var(--bg-color);
 }
 
 .logo {
-    font-size: 2.5rem;
+    font-size: 5rem;
     color: var(--text-color);
     font-weight: 600;
 }
@@ -75,6 +85,7 @@ body {
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
+    
 }
 
 .home {
@@ -82,7 +93,6 @@ section {
     align-items: center;
     padding: 0 9%;
 }
-
 .home-content {
     max-width: 60rem;
 }
@@ -95,22 +105,33 @@ section {
     color: var(--text-color);
 }
 .home-content .text-animate {
-    position:relative;
+    position: relative;
     width: 32.8rem;
 }
 
-.home-content .text-animate {
+.home-content .text-animate h3{
     font-size: 3.2rem;
     font-weight: 700;
     color: transparent;
     -webkit-text-stroke: .7px var(--main-color);
 }
-
 .home-content p {
     font-size: 1.6rem;
     margin: 2rem 0 4rem;
 }
-
+.home-imgHover{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+}
+.home-imgHover:hover{
+    background: white;
+    opacity: .8;
+}
 .btn-box {
     position: relative;
     display: flex;
@@ -162,7 +183,7 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 2rem;
+    gap: 10rem;
     background: var(--secong-bg-color);
     padding-bottom: 6rem;
 }
@@ -193,6 +214,7 @@ span {
 .contact{
     min-height: auto;
     padding-bottom: 7rem;
+    padding-right: 10rem;
 }
 .contact form{
     min-width: 70rem;
@@ -268,8 +290,28 @@ span {
     background: transparent;
     border: .2rem solid var(--main-color);
     border-radius: 50%;
-
-
+    font-size: 20px;
+    color: var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}  
+.socials a:hover{
+    color: var(--bg-color);
+}
+.socials a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1;
+    transition: .5s;
+}
+.socials a:hover::before{
+    width: 100%;
 }
 .footer{
     display: flex;
@@ -331,6 +373,7 @@ span {
     }
     section{
         padding: 10rem 4% 2rem;
+        
     }
     .home{
         padding: 0 2%;
@@ -391,10 +434,13 @@ span {
         transform: translateX(0);
         transition-delay: .25s;
     }
-    .about{
-        width: 80%;
+    .home{
+        width: 150%;
     }
-
+    .about{
+        width: 150%;
+    }
+    
 }
 @media (max-width: 520px){
     html{
@@ -410,20 +456,31 @@ span {
     .socials a{
         width: 38px;
         height: 38px;
+    }.home{
+        width: 150%;
     }
     .about{
-        width: 100%;
+        width: 150%;
     }
 }
 @media (max-width: 462px){
+    .home{
+        width: 150%;
+        padding: 0 15%;
+    }
     .home-content h1 {
         font-size: 5.2rem;
     }
     .contact form .inputbox .input-field {
-        width: 100%;
+        width: 150%;
     }
     .about{
-        width: 100%;
+        width: 150%;
+        padding: 0 15%;
+    }
+    .form{
+        width: 120%;
+        padding: 0 15%;
     }
 
 }
