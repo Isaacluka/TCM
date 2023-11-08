@@ -281,7 +281,7 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('/TCM/data/images/PatternBg.JPG') no-repeat;
+    background: url('/TCM/data/images/PatternBg.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -303,7 +303,7 @@ span {
     min-height: auto;
     padding-bottom: 7rem;
     padding-right: 10rem;
-    background: url('/TCM/data/images/TCM.JPG') no-repeat;
+    background: url('/TCM/data/images/TCM.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
