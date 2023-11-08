@@ -47,7 +47,7 @@ body {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url('/data/images/TCM.JPG') no-repeat;
+    background: url('TCM/data/images/TCM.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     
