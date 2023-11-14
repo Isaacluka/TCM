@@ -26,8 +26,7 @@ html{
 }
 body {
     background: var(--bg-color);
-    color: var(--text-color);
-    
+    color: var(--text-color);    
 }
 
 .header {
@@ -201,7 +200,37 @@ section {
 .btn-box .btn:hover {
     color: var(--main-color);
 }
+.countdown {
+    min-height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: .2rem;
+    color: white;
+    padding: 10rem;
+    background: url('/TCM/data/images/PatternBg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}  
+.countdown h3{
+    -webkit-text-stroke: .9px #1f2a40;
+}
+.countdown table{
+    border: .2rem solid #1f2a40;
+    border-radius: 2rem;
+    background: var(--text-color);
+    color: #faf5e3;
+    padding: 0 10%;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.countdown table .time {
+    font-size: 4rem;
 
+}
 .about {
     display: flex;
     justify-content: center;
@@ -219,7 +248,7 @@ section {
 }
 span {
     color: var(--main-color);
-    -webkit-text-stroke: .9px black;
+    -webkit-text-stroke: .9px #1f2a40;
 }
 .aboutImages{
     position: relative;
@@ -260,6 +289,7 @@ span {
     border-bottom: .2rem solid var(--secong-bg-color);
     border-left: .2rem solid var(--main-color);
     border-right: .2rem solid var(--main-color);
+    animation: aboutSpinner 8s linear infinite;
 }
 .about-content {
     text-align: center;
@@ -276,6 +306,118 @@ span {
 .btn-box.btns a::before {
     background: var(--text-color);
 }
+.theTeam {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+    background: #1f2a40;
+    color: white;
+}
+.theTeamImages {
+    display: flex;
+    gap: 15rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: auto;
+    border: .2rem solid var(--main-color);
+    border-radius: 5rem;
+}
+.theTeam-images{
+    overflow-x: scroll;
+    justify-content: left;
+    align-items: center;
+    scroll-behavior: smooth ;
+    white-space: nowrap;  
+}
+.theTeamImages .theTeam-image{
+    width: 60rem;
+    height: 60rem;
+    border-radius: 5rem;
+    display: inline-block;
+    overflow: hidden;
+    border: .2rem solid white;
+    margin: 2rem;
+    
+}
+.theTeam-image img{
+    width: 100%;
+    height: 100%;
+    /*padding: 5rem;*/
+    border: .2rem solid white;
+}
+.preview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+    background: white;
+    color: var(--text-color);
+}
+.preview .preview-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+.preview-row .preview-column {
+    flex: 1 1 40rem;
+}
+.preview-column .title {
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem 2rem;
+}
+.preview-column .preview-box {
+    border-left: .2rem solid var(--main-color);
+}
+.preview-box .preview-content {
+    position: relative;
+    padding-left: 2rem;
+}
+.preview-box .preview-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--main-color);
+    border-radius: 50%;
+}
+.preview-content .content {
+    position: relative;
+    padding: 1.5rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+.preview-content .content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;   
+    height: 100%;
+    background: white;
+    z-index: -1;
+    transition: .5s;
+}
+.preview-content .content:hover::before{
+    width: 100%;
+}
+.preview-content .content h3 {
+    font-size: 2rem;
+}
+.preview-content .content p {
+    font-size: 1.6rem;
+    padding-top: .5rem;
+}
 .downloadSec{
     min-height: 20vh;
     display: flex;
@@ -285,6 +427,7 @@ span {
     background-size: cover;
     background-position: center;
 }
+
 .downloadSec .btn-box {
     display: flex;
     align-items: center;
@@ -365,7 +508,7 @@ span {
      
 }
 .socials{
-    position: absolute;
+    position: static;
     bottom: 4rem;
     width: 170px;
     display: flex;
@@ -515,7 +658,7 @@ span {
     }
     .navbar a{
         display: block;
-        font-size: 2rem;
+        font-size: 4rem;
         margin: 3rem;
         transform: translateX(-20rem);
         transition: .25s ease;
@@ -527,6 +670,7 @@ span {
     }
     .home{
         width: 150%;
+        min-height: 80vh;
         padding: 0 15%;
     }
     .about{
@@ -540,12 +684,26 @@ span {
         width: 150%;
         padding: 12% 15%;
     }
+    .preview{
+        width: 150%;
+        padding: 12% 15%;
+    }
+    .theTeam{
+        width: 150%;
+        padding: 12% 15%;
+    }
     .footer{
         width: 120%;
     }
     .downloadSec{
         width: 150%;
     }
+    .countdown{
+        width: 150%;
+        max-height: 15rem;
+        flex-direction: row;
+    }
+
     
 }
 @media (max-width: 520px){
@@ -577,12 +735,25 @@ span {
         width: 150%;
         padding: 12% 15%;
     }
+    .preview{
+        width: 150%;
+        padding: 12% 15%;
+    }
+    .theTeam{
+        width: 150%;
+        padding: 12% 15%;
+    }
     .footer{
         width: 120%;
     }
     .downloadSec{
         width: 150%;
     }
+    .countdown{
+        width: 150%;
+        flex-direction: row;
+    }
+
 }
 @media (max-width: 462px){
     .home{
@@ -610,13 +781,24 @@ span {
         width: 150%;
         padding: 12% 15%;
     }
+    .preview{
+        width: 150%;
+        padding: 12% 15%;
+    }
+    .theTeam{
+        width: 150%;
+        padding: 12% 15%;
+    }
     .footer{
         width: 120%;
     }
     .downloadSec{
         width: 150%;
     }
-
+    .countdown{
+        width: 150%;
+        flex-direction: row;
+    }
 }
 /*KEYFRAMES ANIMATION*/
 @keyframes homeBgText {
@@ -638,5 +820,10 @@ span {
     75%,81% {
         width: 0%;
         opacity: 0;
+    }
+}
+@keyframes aboutSpinner{
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
