@@ -201,7 +201,7 @@ section {
 .btn-box .btn:hover {
     color: var(--main-color);
 }
-.countdown {
+/*.countdown {
     min-height: 20vh;
     display: flex;
     justify-content: space-between;
@@ -231,7 +231,7 @@ section {
 .countdown table .time {
     font-size: 4rem;
 
-}
+}*/
 .about {
     display: flex;
     justify-content: center;
@@ -699,11 +699,11 @@ span {
     .downloadSec{
         width: 150%;
     }
-    .countdown{
+    /*.countdown{
         width: 150%;
         max-height: 15rem;
         flex-direction: row;
-    }
+    }*/
 
     
 }
@@ -750,10 +750,10 @@ span {
     .downloadSec{
         width: 150%;
     }
-    .countdown{
+    /*.countdown{
         width: 150%;
         flex-direction: row;
-    }
+    }*/
 
 }
 @media (max-width: 462px){
@@ -796,10 +796,10 @@ span {
     .downloadSec{
         width: 150%;
     }
-    .countdown{
+    /*.countdown{
         width: 150%;
         flex-direction: row;
-    }
+    }*/
 }
 /*KEYFRAMES ANIMATION*/
 @keyframes homeBgText {
